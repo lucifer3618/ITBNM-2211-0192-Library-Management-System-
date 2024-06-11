@@ -61,7 +61,7 @@ public class DBInsert {
     
     public boolean addLibrarian(String fullName, String nic, String address, String telePhone, double hourlyRate, String gender, String username, String password, String privilege){
         boolean status = false;
-        String query = String.format("INSERT INTO librarian (full_name, nic address, tp_number, hourly_rate, gender, username, password, privilege) VALUES "
+        String query = String.format("INSERT INTO librarian (full_name, nic, address, tp_number, hourly_rate, gender, username, password, privilege) VALUES "
                 + "('%s', '%s', '%s', '%s', '%f', '%s', '%s', '%s', '%s')", fullName, nic, address, telePhone, hourlyRate, gender, username, password, privilege);
         try {
             stmt = DBConnection.getStatementConnection();
